@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bienvenido</title>
+</head>
+<body>
+    <form name="form" action="hola.html" method="post">
+        <div>
+            <h2>Bienvenido</h2>
+        </div>
+        <div>
+            <h3>Digite su nombre:</h3>
+            <input type="text" id="holatxt" size="5" />
+            <input type="button" value="Aceptar" onclick="pasarMensaje()" />
+            <p id="hola" />
+        </div>
+    </form>
+
+    <script>
+        var uri = 'api/hola';
+        function pasarMensaje() {
+            var nombre = document.getElementById("holatxt");
+            eval(document.write("{"));
+            eval(document.write("'message':'Hola " + nombre.value + "'"));
+            eval(document.write("}"));
+        }
+    </script>
+
+</body>
+</html>
